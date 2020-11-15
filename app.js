@@ -1,4 +1,8 @@
 const express = require('express');
+//include mongoose module
+var MongoClient = require('mongodb').MongoClient;
+
+
 
 const app = express();
 
@@ -8,9 +12,6 @@ app.get('/',(request, response) => {
   response.render('index')
 });
 
-app.get('/account', (request, response) => {
-  response.render('account');
-});
 
 app.listen(3000, () => {
   console.log("listening on port 3000")
