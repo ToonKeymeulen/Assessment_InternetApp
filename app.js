@@ -1,10 +1,13 @@
 const express = require('express');
-//include mongoose module
-var MongoClient = require('mongodb').MongoClient;
+
+const mongoose = require(‘mongoose’);
+mongoose.connect(‘mongodb+srv://pasta123:pasta123@pastapacket.pz52b.mongodb.net/<dbname>?retryWrites=true&w=majority’, () => {
+   console.log(‘Connected to Mongo DB Successfully!!’);
+})
 
 
+main().catch(console.error);
 
-const app = express();
 
 app.set('view engine', 'pug');
 
